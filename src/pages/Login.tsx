@@ -1,4 +1,4 @@
-import { Envelope } from 'phosphor-react'
+import { Envelope, Lock } from 'phosphor-react'
 
 export function Login() {
   return (
@@ -23,6 +23,19 @@ export function Login() {
                 autoComplete="off"
                 className="flex-1 bg-transparent outline-none placeholder:text-zinc-600 text-zinc-300"
                 placeholder="Digite seu e-mail"
+              />
+            </div>
+          </label>
+          <label htmlFor="password" className="flex flex-col px-8 gap-2">
+            <strong className="text-sm text-zinc-300">Sua sennha</strong>
+            <div className=" bg-zinc-800 rounded-md flex items-center justify-center gap-3 py-2 px-3">
+              <Lock size={22} className="text-zinc-500 " />
+              <input
+                type="password"
+                name="email"
+                autoComplete="off"
+                className="flex-1 bg-transparent outline-none placeholder:text-zinc-600 text-zinc-300"
+                placeholder="*************"
               />
             </div>
           </label>
