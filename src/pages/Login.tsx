@@ -1,5 +1,6 @@
 import { Check, Envelope, Lock } from 'phosphor-react'
 import * as Checkbox from '@radix-ui/react-checkbox'
+import { Link } from 'react-router-dom'
 
 export function Login() {
   return (
@@ -55,7 +56,7 @@ export function Login() {
             </strong>
           </label>
 
-          <button className="bg-cyan-600 mx-8 rounded-md py-3 mt-3 font-bold text-zinc-300 bg-[200% 200%]">
+          <button className="bg-cyan-600 mx-8 rounded-md py-3 mt-3 font-bold text-zinc-300 hover:bg-cyan-500">
             Entrar na plataforma
           </button>
         </form>
@@ -64,9 +65,12 @@ export function Login() {
           <a href="" className="text-zinc-600 underline text-sm">
             Esqueceu sua senha?
           </a>
-          <a href="" className="text-zinc-600 underline text-sm">
-            Não possui conta? Crie uma agora!
-          </a>
+          <span className="text-zinc-600 text-sm">
+            Não possui conta?{' '}
+            <Link to={'/register'} className=" underline ">
+              Crie uma agora!
+            </Link>
+          </span>
         </div>
       </div>
     </div>
