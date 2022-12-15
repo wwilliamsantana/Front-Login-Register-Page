@@ -1,4 +1,5 @@
-import { Envelope, Lock } from 'phosphor-react'
+import { Check, Envelope, Lock } from 'phosphor-react'
+import * as Checkbox from '@radix-ui/react-checkbox'
 
 export function Login() {
   return (
@@ -39,7 +40,34 @@ export function Login() {
               />
             </div>
           </label>
+
+          <label
+            htmlFor="remember"
+            className="flex items-center justify-start gap-2 px-8 "
+          >
+            <Checkbox.Root className="w-5 h-5 rounded-md bg-zinc-800 flex items-center justify-center outline-none">
+              <Checkbox.Indicator>
+                <Check size={16} className="text-zinc-300" />
+              </Checkbox.Indicator>
+            </Checkbox.Root>
+            <strong className="text-sm text-zinc-500">
+              Lembrar de mim por 30 dias
+            </strong>
+          </label>
+
+          <button className="bg-cyan-600 mx-8 rounded-md py-3 mt-3 font-bold text-zinc-300 bg-[200% 200%]">
+            Entrar na plataforma
+          </button>
         </form>
+
+        <div className="flex items-center justify-center mt-10 gap-1 flex-col">
+          <a href="" className="text-zinc-600 underline text-sm">
+            Esqueceu sua senha?
+          </a>
+          <a href="" className="text-zinc-600 underline text-sm">
+            Não possui conta? Crie uma agora!
+          </a>
+        </div>
       </div>
     </div>
   )
