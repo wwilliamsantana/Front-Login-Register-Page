@@ -1,3 +1,5 @@
+import { Envelope } from 'phosphor-react'
+
 export function Login() {
   return (
     <div className="grid place-items-center h-screen">
@@ -9,6 +11,22 @@ export function Login() {
             Faça o login e comece a usar!
           </strong>
         </header>
+
+        <form className="flex flex-col gap-6 mt-8">
+          <label htmlFor="email" className="flex flex-col px-8 gap-2">
+            <strong className="text-sm text-zinc-300">Endereço de email</strong>
+            <div className=" bg-zinc-800 rounded-md flex items-center justify-center gap-3 py-2 px-3">
+              <Envelope size={22} className="text-zinc-500 " />
+              <input
+                type="text"
+                name="email"
+                autoComplete="off"
+                className="flex-1 bg-transparent outline-none placeholder:text-zinc-600 text-zinc-300"
+                placeholder="Digite seu e-mail"
+              />
+            </div>
+          </label>
+        </form>
       </div>
     </div>
   )
