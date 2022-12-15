@@ -1,6 +1,7 @@
 import { Check, Envelope, Lock } from 'phosphor-react'
 import * as Checkbox from '@radix-ui/react-checkbox'
 import { Link } from 'react-router-dom'
+import { Input } from '../components/Inputs'
 
 export function Login() {
   return (
@@ -16,30 +17,34 @@ export function Login() {
 
         <form className="flex flex-col gap-6 mt-8">
           <label htmlFor="email" className="flex flex-col px-8 gap-2">
-            <strong className="text-sm text-zinc-300">Endereço de email</strong>
-            <div className=" bg-zinc-800 rounded-md flex items-center justify-center gap-3 py-2 px-3">
-              <Envelope size={22} className="text-zinc-500 " />
-              <input
+            <Input.Text>Endereço de email</Input.Text>
+            <Input.Root classnames="bg-zinc-800">
+              <Input.Icon>
+                <Envelope />
+              </Input.Icon>
+
+              <Input.Input
                 type="text"
                 name="email"
-                autoComplete="off"
-                className="flex-1 bg-transparent outline-none placeholder:text-zinc-600 text-zinc-300"
                 placeholder="Digite seu e-mail"
+                classnames="placeholder:text-zinc-600 text-zinc-300"
               />
-            </div>
+            </Input.Root>
           </label>
           <label htmlFor="password" className="flex flex-col px-8 gap-2">
-            <strong className="text-sm text-zinc-300">Sua sennha</strong>
-            <div className=" bg-zinc-800 rounded-md flex items-center justify-center gap-3 py-2 px-3">
-              <Lock size={22} className="text-zinc-500 " />
-              <input
+            <Input.Text>Sua sennha</Input.Text>
+            <Input.Root classnames="bg-zinc-800">
+              <Input.Icon>
+                <Lock />
+              </Input.Icon>
+
+              <Input.Input
                 type="password"
-                name="email"
-                autoComplete="off"
-                className="flex-1 bg-transparent outline-none placeholder:text-zinc-600 text-zinc-300"
+                name="password"
                 placeholder="*************"
+                classnames="placeholder:text-zinc-600 text-zinc-300"
               />
-            </div>
+            </Input.Root>
           </label>
 
           <label
